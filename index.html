@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鴻賜資產｜大專生專屬・資金週轉特快車</title>
+    <script>document.documentElement.classList.add('c-config-loading');</script>
+    <style>.c-config-loading body{visibility:hidden}</style>
+    <script src="page-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- FB / TikTok Pixel 由 C 項目 page-config.js 按後台 Page 設定載入 -->
+
+    <style>
+        .hero-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .radio-btn input { display: none; }
+        .radio-btn.active { border-color: #2563eb; background-color: #eff6ff; color: #1d4ed8; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-black mb-6">鴻賜資產｜學生專屬理財方案</h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90">最懂大專生的週轉夥伴，線上申請・保密快速</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🎓 憑學生證即可申辦</span>
+            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🛡️ 保障隱私・絕不寄信</span>
+            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🚀 最快當日完成簽約</span>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-8 border-t-8 border-blue-600">
+            <h2 class="text-2xl font-bold text-center mb-8 text-blue-900">立即填寫，免費評估</h2>
+            
+            <form id="loanForm" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="姓名 *" required class="w-full p-4 border rounded-xl">
+                    <input type="tel" name="phone" placeholder="手機號碼 *" required class="w-full p-4 border rounded-xl">
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="lineId" placeholder="LINE ID *" required class="w-full p-4 border rounded-xl">
+                    <input type="text" name="id_card" placeholder="身分證字號 *" required class="w-full p-4 border rounded-xl">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <select name="county" required class="w-full p-4 border rounded-xl bg-white" id="county">
+                        <option value="">選擇居住縣市 *</option>
+                    </select>
+                    <input type="number" name="age" placeholder="年齡 *" required class="w-full p-4 border rounded-xl">
+                </div>
+
+                <select name="amount" required class="w-full p-4 border rounded-xl bg-white">
+                    <option value="">選擇貸款金額需求 *</option>
+                    <option value="10萬以下">10萬以下</option>
+                    <option value="10-20萬">10-20萬</option>
+                    <option value="20-30萬">20-30萬</option>
+                    <option value="40-50萬">40-50萬</option>
+                    <option value="50萬以上">50萬以上</option>
+                </select>
+
+                <!-- 財務評估模組 -->
+                <div class="space-y-4 pt-4 border-t">
+                    <label class="font-bold text-blue-900">基本財務評估 *</label>
+                    <div class="bg-gray-50 p-4 rounded-xl space-y-4">
+                        <div class="flex justify-between items-center"><span class="text-sm">銀行是否為警示戶？</span><div class="flex gap-2"><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="is_warning" value="是" required>是</label><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="is_warning" value="否" required>否</label></div></div>
+                        <div class="flex justify-between items-center"><span class="text-sm">是否有個人外幣帳戶？</span><div class="flex gap-2"><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_foreign" value="是" required>是</label><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_foreign" value="否" required>否</label></div></div>
+                        <div class="flex justify-between items-center"><span class="text-sm">是否有信貸／房貸／汽貸／機貸？</span><div class="flex gap-2"><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_loan" value="是" required>是</label><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_loan" value="否" required>否</label></div></div>
+                        <div class="flex justify-between items-center"><span class="text-sm">銀行協商或呆帳？</span><div class="flex gap-2"><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_debt" value="是" required>是</label><label class="radio-btn border px-4 py-1 rounded cursor-pointer"><input type="radio" name="has_debt" value="否" required>否</label></div></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-700">送出申請</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const SUPABASE_URL = 'https://ijzywhrnhvldkjdwfdyy.supabase.co';
+        const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_6aY1-VEvimuV1K4FzURO2Q_inVt-ZKL';
+        let ENTERPRISE_LINE_URL = 'https://line.me/ti/p/@987apocu';
+        let ENTERPRISE_LINE_ID = '@987apocu';
+
+        function normalizeLineUrl(lineUrl, lineId) {
+            const url = String(lineUrl || '').trim();
+            const id = String(lineId || '').trim();
+            if (/^https?:\/\//i.test(url)) return url;
+            if (id.startsWith('@')) return 'https://line.me/ti/p/' + id;
+            return ENTERPRISE_LINE_URL;
+        }
+
+        function applyCPageConfig(config) {
+            config = config || {};
+            ENTERPRISE_LINE_ID = config.line_id || ENTERPRISE_LINE_ID;
+            ENTERPRISE_LINE_URL = normalizeLineUrl(config.line_url, ENTERPRISE_LINE_ID);
+            const companyName = config.company_name || '';
+            if (!companyName) return;
+            const oldNames = ['鴻賜資產管理有限公司', '鴻賜資產管理', '鴻賜資產'];
+            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+            const nodes = [];
+            while (walker.nextNode()) nodes.push(walker.currentNode);
+            nodes.forEach(node => {
+                if (!node.parentElement || /^(SCRIPT|STYLE)$/.test(node.parentElement.tagName)) return;
+                oldNames.forEach(oldName => {
+                    node.nodeValue = node.nodeValue.split(oldName).join(companyName);
+                });
+            });
+            oldNames.forEach(oldName => {
+                document.title = document.title.split(oldName).join(companyName);
+            });
+        }
+
+        Promise.resolve(window.PAGE_CONFIG_READY)
+            .then(applyCPageConfig)
+            .catch(error => console.warn('Page config load failed:', error))
+            .finally(() => document.documentElement.classList.remove('c-config-loading'));
+
+        function createLeadId() {
+            if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+                const r = Math.random() * 16 | 0;
+                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        async function submitLeadPayload(payload) {
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    apikey: SUPABASE_PUBLISHABLE_KEY,
+                    Authorization: 'Bearer ' + SUPABASE_PUBLISHABLE_KEY,
+                    'Content-Type': 'application/json',
+                    Prefer: 'return=minimal'
+                },
+                body: JSON.stringify(payload)
+            };
+            let response = await fetch(SUPABASE_URL + '/rest/v1/leads', requestOptions);
+            if (!response.ok && payload.traffic_source) {
+                const errorText = await response.clone().text();
+                if (errorText.includes('traffic_source')) {
+                    const fallbackPayload = { ...payload };
+                    delete fallbackPayload.traffic_source;
+                    requestOptions.body = JSON.stringify(fallbackPayload);
+                    response = await fetch(SUPABASE_URL + '/rest/v1/leads', requestOptions);
+                }
+            }
+            return response;
+        }
+
+        function trackLineClick() {
+            if (!window.__lastLeadId) return;
+            fetch(SUPABASE_URL + '/rest/v1/rpc/mark_line_clicked', {
+                method: 'POST',
+                keepalive: true,
+                headers: {
+                    apikey: SUPABASE_PUBLISHABLE_KEY,
+                    Authorization: 'Bearer ' + SUPABASE_PUBLISHABLE_KEY,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ lead_id: window.__lastLeadId })
+            }).catch(error => console.warn('Line click update error:', error));
+        }
+
+        const counties = ["基隆市", "台北市", "新北市", "桃園市", "新竹市", "新竹縣", "苗栗縣", "台中市", "彰化縣", "南投縣", "雲林縣", "嘉義市", "嘉義縣", "台南市", "高雄市", "屏東縣", "宜蘭縣", "花蓮縣", "台東縣", "澎湖縣", "金門縣", "連江縣"];
+        counties.forEach(c => county.innerHTML += `<option value="${c}">${c}</option>`);
+
+        document.querySelectorAll('.radio-btn').forEach(l => l.addEventListener('click', function() {
+            this.parentNode.querySelectorAll('.radio-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            this.querySelector('input').checked = true;
+        }));
+
+        document.getElementById('loanForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            await Promise.resolve(window.PAGE_CONFIG_READY).catch(() => null);
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            const leadId = createLeadId();
+            const pageConfig = window.PAGE_CONFIG || {};
+            const payload = {
+                id: leadId,
+                page_id: pageConfig.id || null,
+                page_slug: window.PAGE_SLUG || 'main',
+                name: data.name || '',
+                age: data.age ? Number(data.age) : null,
+                city: data.county || '',
+                id_number: String(data.id_card || '').toUpperCase(),
+                phone: data.phone || '',
+                line_id: data.lineId || '',
+                q1_existing_loan: '是否有信貸／房貸／汽貸／機貸：' + (data.has_loan || '') + '；銀行協商或呆帳：' + (data.has_debt || ''),
+                q2_bank_status: '銀行是否為警示戶：' + (data.is_warning || ''),
+                q3_amount_needed: data.amount || '',
+                q4_foreign_currency_account: '是否有個人外幣帳戶：' + (data.has_foreign || ''),
+                source_url: window.location.href,
+                traffic_source: window.TRAFFIC_SOURCE || null,
+                user_agent: navigator.userAgent,
+                status: 'new',
+                line_clicked: false
+            };
+
+            try {
+                const response = await submitLeadPayload(payload);
+                if (!response.ok) throw new Error('Supabase insert failed: ' + response.status);
+                window.__lastLeadId = leadId;
+                window.trackPageEvent?.('Lead', {
+                    content_name: 'I版學生專屬申請',
+                    content_category: '貸款引流',
+                    value: 0,
+                    currency: 'TWD'
+                });
+                window.trackPageEvent?.('CompleteRegistration', {
+                    content_name: 'I版學生專屬申請',
+                    status: 'submitted'
+                });
+                window.trackTikTokEvent?.('SubmitForm', { content_type: 'loan_application' });
+                console.log("數據收集完畢，準備跳轉");
+            } catch (error) {
+                console.error('保存表單失敗:', error);
+            } finally {
+                trackLineClick();
+                window.location.href = ENTERPRISE_LINE_URL;
+            }
+        });
+    </script>
+</body>
+</html>
