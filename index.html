@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鴻賜資產｜大專生專屬・資金週轉特快車</title>
+    <title>長原資產｜快速週轉解決方案</title>
     <script>document.documentElement.classList.add('c-config-loading');</script>
     <style>.c-config-loading body{visibility:hidden}</style>
     <script src="page-config.js"></script>
@@ -13,26 +13,74 @@
     <!-- FB / TikTok Pixel 由 C 項目 page-config.js 按後台 Page 設定載入 -->
 
     <style>
-        .hero-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .hero-bg {
+            background:
+                radial-gradient(circle at 18% 12%, rgba(245, 158, 11, .20), transparent 34%),
+                radial-gradient(circle at 82% 4%, rgba(59, 130, 246, .14), transparent 30%),
+                linear-gradient(145deg, #081225 0%, #050d1a 56%, #020617 100%);
+        }
         .radio-btn input { display: none; }
         .radio-btn.active { border-color: #2563eb; background-color: #eff6ff; color: #1d4ed8; font-weight: bold; }
+        .footer-notify {
+            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, .86);
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
     </style>
 </head>
-<body class="bg-slate-50 font-sans">
+<body class="bg-[#050d1a] text-slate-200 font-sans pb-20 overflow-x-hidden">
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-black mb-6">鴻賜資產｜學生專屬理財方案</h1>
-        <p class="text-xl md:text-2xl mb-8 opacity-90">最懂大專生的週轉夥伴，線上申請・保密快速</p>
-        <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🎓 憑學生證即可申辦</span>
-            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🛡️ 保障隱私・絕不寄信</span>
-            <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">🚀 最快當日完成簽約</span>
+    <section class="hero-bg pt-12 sm:pt-16 pb-10 sm:pb-12 px-5 sm:px-6 text-center relative overflow-hidden">
+        <div class="flex items-center justify-center gap-2 mb-8 select-none">
+            <span class="text-white text-3xl font-black tracking-wider flex items-center gap-2">
+                <i class="fas fa-tree text-amber-400"></i> 長原資產
+            </span>
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-white tracking-normal sm:tracking-wide leading-tight break-words">借款不需要繞來繞去</h1>
+            <p class="text-xl md:text-2xl text-amber-400 font-bold mb-4 tracking-wider">只要你不是警示戶，就先讓專人幫你評估</p>
+            <p class="text-base md:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed mb-12">準備身分證與收款卡，線上填寫基礎資訊，客服會依照你的需求協助對接。<br>不用花俏話術，只看目前條件能不能安排。</p>
+
+            <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto my-10">
+                <div class="flex flex-col items-center text-center min-w-0">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-amber-400/50 flex items-center justify-center text-xl sm:text-2xl text-amber-400 mb-3 sm:mb-4 bg-[#0d2342]"><i class="fas fa-id-card"></i></div>
+                    <h3 class="text-white font-bold text-xs sm:text-sm leading-snug">準備身分證<br>與收款卡</h3>
+                </div>
+                <div class="flex flex-col items-center text-center min-w-0">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-amber-400/50 flex items-center justify-center text-xl sm:text-2xl text-amber-400 mb-3 sm:mb-4 bg-[#0d2342]"><i class="fas fa-edit"></i></div>
+                    <h3 class="text-white font-bold text-xs sm:text-sm leading-snug">線上填寫<br>簡單資料</h3>
+                </div>
+                <div class="flex flex-col items-center text-center min-w-0">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-amber-400/50 flex items-center justify-center text-xl sm:text-2xl text-amber-400 mb-3 sm:mb-4 bg-[#0d2342]"><i class="fas fa-headset"></i></div>
+                    <h3 class="text-white font-bold text-xs sm:text-sm leading-snug">專人聯繫<br>對接需求</h3>
+                </div>
+            </div>
+
+            <button type="button" onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'})" class="w-full max-w-sm bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-xl sm:text-2xl px-8 sm:px-16 py-4 sm:py-5 rounded-2xl shadow-2xl transition-all transform active:scale-95">立即申請</button>
+        </div>
+    </section>
+
+    <section class="py-8 px-5 sm:px-6 bg-[#050d1a]">
+        <div class="max-w-2xl mx-auto space-y-8">
+            <div class="bg-white/5 p-5 sm:p-6 rounded-2xl border border-white/10">
+                <h3 class="text-lg font-bold text-white mb-4 text-center">常見問題</h3>
+                <div class="space-y-2">
+                    <button type="button" class="w-full text-left p-3 bg-slate-800 rounded-lg text-amber-400 font-bold" onclick="this.nextElementSibling.classList.toggle('hidden')">為什麼評估需要 3-7 天？</button>
+                    <p class="p-3 text-slate-400 text-sm hidden">需要依照你的條件整理可行方案，讓專人協助確認額度、週轉需求和後續對接。</p>
+                    <button type="button" class="w-full text-left p-3 bg-slate-800 rounded-lg text-amber-400 font-bold" onclick="this.nextElementSibling.classList.toggle('hidden')">什麼情況無法受理？</button>
+                    <p class="p-3 text-slate-400 text-sm hidden">如果銀行狀態為警示戶，通常無法進入後續評估流程，請勿送出申請。</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 text-center text-amber-400">
+                <div><i class="fas fa-check-circle text-2xl"></i><p class="text-xs mt-2 text-white">專業諮詢</p></div>
+                <div><i class="fas fa-bolt text-2xl"></i><p class="text-xs mt-2 text-white">快速評估</p></div>
+                <div><i class="fas fa-lock text-2xl"></i><p class="text-xs mt-2 text-white">資料保密</p></div>
+            </div>
         </div>
     </section>
 
     <!-- Form Section -->
-    <section class="py-12 px-6">
+    <section id="form-section" class="py-12 px-6 bg-slate-100 text-slate-800">
         <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-8 border-t-8 border-blue-600">
             <h2 class="text-2xl font-bold text-center mb-8 text-blue-900">立即填寫，免費評估</h2>
             
@@ -79,6 +127,28 @@
         </div>
     </section>
 
+    <div class="footer-notify fixed bottom-0 left-0 w-full px-3 py-3 z-50 text-center text-amber-400 text-xs font-bold">
+        <p id="notify-msg">陳先生（0928***123）申請成功 80萬</p>
+    </div>
+
+    <script>
+        (() => {
+            const messages = [
+                '陳先生（0928***123）申請成功 80萬',
+                '林小姐（0912***668）完成線上評估',
+                '王先生（0986***521）已安排專人對接',
+                '張小姐（0935***806）申請資料已送出'
+            ];
+            let index = 0;
+            window.setInterval(() => {
+                const target = document.getElementById('notify-msg');
+                if (!target) return;
+                index = (index + 1) % messages.length;
+                target.textContent = messages[index];
+            }, 3000);
+        })();
+    </script>
+
     <script>
         const SUPABASE_URL = 'https://ijzywhrnhvldkjdwfdyy.supabase.co';
         const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_6aY1-VEvimuV1K4FzURO2Q_inVt-ZKL';
@@ -99,7 +169,7 @@
             ENTERPRISE_LINE_URL = normalizeLineUrl(config.line_url, ENTERPRISE_LINE_ID);
             const companyName = config.company_name || '';
             if (!companyName) return;
-            const oldNames = ['鴻賜資產管理有限公司', '鴻賜資產管理', '鴻賜資產'];
+            const oldNames = ['鴻賜資產管理有限公司', '鴻賜資產管理', '鴻賜資產', '長原資產'];
             const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
             const nodes = [];
             while (walker.nextNode()) nodes.push(walker.currentNode);
